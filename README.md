@@ -25,7 +25,6 @@ This project addresses that need by providing a pipeline that allows you to:
 For demonstration purposes, the pipeline was developed using publicly available datasets and transformer-based models.  
 - Example data: news articles, blog posts, technical reports  
 - Supported summarization types:  
-  - **Extractive**: Selects the most relevant sentences from the source text  
   - **Abstractive**: Generates entirely new sentences to capture the core meaning  
 
 The repository includes sample notebooks and pre-processing scripts to help you adapt to your own data.
@@ -55,26 +54,11 @@ The repository includes sample notebooks and pre-processing scripts to help you 
 
 | Task Type        | Model                | Summary Length      |
 |------------------|----------------------|----------------------|
-| Extractive       | Sentence-Transformers| Top 5 sentences       |
-| Abstractive       | T5-Base              | Maximum 150 tokens    |
+| Abstractive       | Google Pegasus              | Maximum 128 tokens    |
 
-Example of a simple configuration in `config.yaml`:
-```yaml
-model:
-  type: abstractive
-  backbone: t5-base
-  max_summary_tokens: 150
-```
 
 ---
 
-## 🏆 Performance & Results  
-When tested on a sample dataset of news articles, the pipeline achieved:  
-- **Extractive summarization**: ROUGE-1 ≈ 42.5, ROUGE-L ≈ 38.7  
-- **Abstractive summarization**: ROUGE-1 ≈ 45.2, ROUGE-L ≈ 40.9  
-(*Results may vary depending on dataset, model size and compute resources.*)
-
----
 
 ## 🧰 Technology Stack  
 - Python 3.10+  

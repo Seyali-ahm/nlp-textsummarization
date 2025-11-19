@@ -99,12 +99,6 @@ nlp-textsummarization/
 ├── config.yaml               ← default configuration file  
 ├── notebooks/                ← exploratory analysis and visualization  
 ├── src/
-│   ├── preprocessing/        ← tokenization, sentence splitting  
-│   ├── extractive/           ← extractive summarizer code  
-│   ├── abstractive/          ← abstractive summarizer code  
-│   ├── evaluation/          ← scripts for ROUGE and metrics  
-│   └── run_summary.py       ← CLI entry point  
-│
 ├── requirements.txt  
 └── README.md                ← this file  
 ```
